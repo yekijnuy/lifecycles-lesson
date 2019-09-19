@@ -37,6 +37,9 @@ class App extends React.Component {
           >
             Update Text
           </button>
+          {/* When we DON"T want the lifecyle component, React is like 'okay let's call componentWillUnMount' 
+            anything that could be memory leaks.  This is where we get rid of where garbage collection can't get rid of
+           */}
           {this.state.showChild ? <Lifecycles text={this.state.text} /> : null}
         </header>
       </div>
